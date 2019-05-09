@@ -1,2 +1,1 @@
-# tesseract.net
-a .net wrapper for Tesseract
+A fork of https://github.com/tvn-cosine/tesseract.net
