@@ -9,15 +9,16 @@ namespace Tesseract.Native
         private const string pattern = @"pvt.cppan.demo.";
         private const string x64 = @"x64";
         private const string x86 = @"x86";
-        private const string tesseractDllName = "pvt.cppan.demo.google.tesseract.libtesseract400.dll";
+        private const string tesseractDllName = @"D:\home\site\wwwroot\pvt.cppan.demo.google.tesseract.libtesseract400.dll";
 
         static DllImports()
         {
-            if (string.IsNullOrWhiteSpace(TesseractDirectory))
-            {
-                TesseractDirectory = Environment.CurrentDirectory;
-            }
-            CopyDlls();
+	        TesseractDirectory = tesseractDllName;
+	        //if (string.IsNullOrWhiteSpace(TesseractDirectory))
+	        //{
+	        //    TesseractDirectory = Environment.CurrentDirectory;
+	        //}
+	        //CopyDlls();
         }
 
         private static string tesseractDirectory;
@@ -34,7 +35,7 @@ namespace Tesseract.Native
                     if (Directory.Exists(value))
                     {
                         tesseractDirectory = value;
-                        CopyDlls();
+                        //CopyDlls();
                     }
                 }
             }
